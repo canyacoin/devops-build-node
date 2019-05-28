@@ -11,7 +11,7 @@ NodeJS and npm container image setup to deploy CanYa angular 5+ applications wit
 #### Build
 
 ```
-docker build --squash . -t registry.gitlab.com/canya-com/node-build-container:X.X # <----- set the tag version plus one
+docker build --squash . -t registry.gitlab.com/canyacoin/node-build-container:X.X # <----- set the tag version plus one
 ```
 
 Take note of the built imageID
@@ -19,7 +19,7 @@ Take note of the built imageID
 #### Push
 
 ```
-docker push registry.gitlab.com/canya-com/node-build-container:X.X <----- set the tag version from the squash step
+docker push registry.gitlab.com/canyacoin/node-build-container:X.X <----- set the tag version from the squash step
 ```
 
 ## Running locally
