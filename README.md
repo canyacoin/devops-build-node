@@ -8,13 +8,30 @@ NodeJS and npm container image setup to deploy CanYa angular 5+ applications wit
 
 - [Docker](https://docs.docker.com/install/#releases)
 
+Run and start docker locally (using the GUI)
+
+Navigate to the local repo. 
+
+Login to Gitlab: 
+```
+docker login registry.gitlab.com <--- Enter your gitlab credentials
+```
+ 
+<!--Update your $HOME/.docker/config.json to enable experimental mode (for `--squash` feature)-->
+
+<!--```-->
+<!--{-->
+<!--        "experimental": "enabled"-->
+<!--}-->
+<!--```-->
+
 #### Build
 
 ```
-docker build --squash . -t registry.gitlab.com/canyacoin/node-build-container:X.X # <----- set the tag version plus one
+docker build . -t registry.gitlab.com/canyacoin/node-build-container:X.X # <----- set the tag version plus one
 ```
 
-Take note of the built imageID
+Take note of the built imageID `X.X`
 
 #### Push
 
@@ -27,3 +44,8 @@ docker push registry.gitlab.com/canyacoin/node-build-container:X.X <----- set th
 ```
 docker run -it --entrypoint /bin/bash <imageID>
 ```
+
+## Help
+
+https://docs.gitlab.com/ee/user/project/container_registry.html
+
