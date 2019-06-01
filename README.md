@@ -1,5 +1,12 @@
 # canya-node-build-container
 
+**Mirror**
+
+This repo is mirrored from the Gitlab master as a backup. Please commit to this:
+
+https://gitlab.com/canyacoin/canyacore/devops/node-build-container
+---
+
 NodeJS and npm container image setup to deploy CanYa angular 5+ applications with GitLab CI/CD
 
 ## Create a new Docker image
